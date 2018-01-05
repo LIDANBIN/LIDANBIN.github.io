@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时钟</title>
+    <style type="text/css">
+        .wrapper {
+            height: 300px;
+            width: 300px;
+            background-color: #dcdcdc;
+            margin: 100px auto;
+            position: relative;
+        }
+        .clock {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            left: 148px;
+        }
+        .clock li {
+            height: 10px;
+            width: 4px;
+            background: #535353;
+            transform-origin: 2px 150px;
+            position: absolute;
+        }
+        .clock li:nth-child(5n + 1) {
+            height: 14px;
+            width: 4px;
+            background: black;
+            transform-origin: 2px 150px;
+            position: absolute;
+        }
+        .hour {
+            height: 30px;
+            width: 6px;
+            background: #000;
+            position: absolute;
+            top: 120px;
+            left: 147px;
+            transform-origin: bottom;
+        }
+        .minute {
+            height: 50px;
+            width: 4px;
+            background: #000;
+            position: absolute;
+            top: 100px;
+            left: 148px;
+            transform-origin: bottom;
+        }
+        .second {
+            height: 100px;
+            width: 2px;
+            background: #ff0000;
+            position: absolute;
+            top: 50px;
+            left: 149px;
+            transform-origin: bottom;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <ul class="clock"></ul>
+    <div class="hour"></div>
+    <div class="minute"></div>
+    <div class="second"></div>
+</div>
+<script type="text/javascript">
+    var clockUl = document.querySelector(".clock");
+    for (i = 0; i < 60; i++){
+        var minutesBox = document.createElement("li");
+        clockUl.appendChild(minutesBox);
+        minutesBox.style.transform = "rotate(" + i*6 + "deg)";
+    }
+    var hourDiv = document.querySelector(".hour");
+    var minuteDiv = document.querySelector(".minute");
+    var secondDiv = document.querySelector(".second");
+    setInterval(function(){
+        var timer = new Date();//获取当前时间。
+        var secondTime = timer.getSeconds();//获取当前秒数。
+        var minuteTime = timer.getMinutes() + secondTime/60;//获取当前分数。
+        var hourTime = timer.getHours() + minuteTime/60;//获取当前小时数。
+        hourDiv.style.transform = "rotate(" + hourTime*30 + "deg)";
+        minuteDiv.style.transform = "rotate(" + minuteTime*6 + "deg)";
+        secondDiv.style.transform = "rotate(" + secondTime*6 + "deg)";
+    },1000);
+</script>
+</body>
+</html>
