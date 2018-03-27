@@ -2,92 +2,802 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>时钟</title>
-    <style type="text/css">
-        .wrapper {
-            height: 300px;
-            width: 300px;
-            background-color: #dcdcdc;
-            margin: 100px auto;
-            position: relative;
-        }
-        .clock {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            position: relative;
-            left: 148px;
-        }
-        .clock li {
-            height: 10px;
-            width: 4px;
-            background: #535353;
-            transform-origin: 2px 150px;
-            position: absolute;
-        }
-        .clock li:nth-child(5n + 1) {
-            height: 14px;
-            width: 4px;
-            background: black;
-            transform-origin: 2px 150px;
-            position: absolute;
-        }
-        .hour {
-            height: 30px;
-            width: 6px;
-            background: #000;
-            position: absolute;
-            top: 120px;
-            left: 147px;
-            transform-origin: bottom;
-        }
-        .minute {
-            height: 50px;
-            width: 4px;
-            background: #000;
-            position: absolute;
-            top: 100px;
-            left: 148px;
-            transform-origin: bottom;
-        }
-        .second {
-            height: 100px;
-            width: 2px;
-            background: #ff0000;
-            position: absolute;
-            top: 50px;
-            left: 149px;
-            transform-origin: bottom;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>音悦台首页</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-<div class="wrapper">
-    <ul class="clock"></ul>
-    <div class="hour"></div>
-    <div class="minute"></div>
-    <div class="second"></div>
-    <div>珍惜时间啊同志们！</div>
+<div class="wrap">
+    <header class="header">
+        <div class="nav">
+            <div class="logo"><h1><img src="img/logo.png"/></h1></div>
+            <div id="menu" class="menuClose"></div>
+            <div class="btn">
+                <a href="javascript:;">搜索</a>
+                <a href="javascript:;">登录</a>
+                <a href="javascript:;">注册</a>
+            </div>
+        </div>
+        <div class="search">
+            <input id="text" type="text" placeholder="请输入搜索内容">
+            <input id='submit' type="submit" value="搜索">
+        </div>
+        <div class="mask">
+            <ul>
+                <li><a href="javascript:;">首页</a></li>
+                <li><a href="javascript:;">MV</a></li>
+                <li><a href="javascript:;">悦单</a></li>
+                <li><a href="javascript:;">V榜</a></li>
+                <li><a href="javascript:;">音悦</a></li>
+                <li><a href="javascript:;">商城</a></li>
+                <li><a href="javascript:;">节目</a></li>
+                <li><a href="javascript:;">饭团</a></li>
+                <li><a href="javascript:;">资讯</a></li>
+                <li><a href="javascript:;">我的家</a></li>
+                <li><a href="javascript:;">APP下载</a></li>
+                <li><a href="javascript:;">热门应用</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="sec_wrap">
+        <div class="content">
+            <section>
+                <!--导航条-->
+                <div class="navbar">
+                    <ul>
+                        <li class="selected"><a href="javascript:;">首页</a></li>
+                        <li><a href="javascript:;">MV</a></li>
+                        <li><a href="javascript:;">悦单</a></li>
+                        <li><a href="javascript:;">V榜</a></li>
+                        <li><a href="javascript:;">音悦</a></li>
+                        <li><a href="javascript:;">商城</a></li>
+                        <li><a href="javascript:;">节目</a></li>
+                        <li><a href="javascript:;">饭团</a></li>
+                        <li><a href="javascript:;">资讯</a></li>
+                        <li><a href="javascript:;">我的家</a></li>
+                        <li><a href="javascript:;">APP下载</a></li>
+                        <li><a href="javascript:;">热门应用</a></li>
+                    </ul>
+                </div>
+                <!--轮播图-->
+                <div class="banner_wrap clearfix">
+                    <ul id="list">
+                        <li><a href="javascript:;"><img src="img/img/1.jpg" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="img/img/2.jpg" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="img/img/3.jpg" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="img/img/4.jpg" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="img/img/5.jpg" alt=""></a></li>
+                    </ul>
+                    <div class="span_nav">
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <!--选项卡-->
+                <div class="tab">
+                    <header class="tab_nav clearfix">
+                        <h3>MV首播</h3>
+                        <a href="javascript:;">更多&gt;</a>
+                    </header>
+                    <section class="tab_content">
+                        <div class="tab_menu">
+                            <a href="javascript:;" class="J_area cur" data-area="all">全部</a>
+                            <a href="javascript:;" class="J_area" data-area="ml">内地</a>
+                            <a href="javascript:;" class="J_area" data-area="ht">港台</a>
+                            <a href="javascript:;" class="J_area" data-area="us">欧美</a>
+                            <a href="javascript:;" class="J_area" data-area="kr">韩国</a>
+                            <a href="javascript:;" class="J_area" data-area="jp">日本</a>
+                            <span class="tab_menu_flag"></span>
+                        </div>
+                        <div class="tab_detail clearfix">
+                            <ul class="loading"><img src="img/img/loading.gif"></ul>
+                            <ul class="video_item_list">
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/a.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">世勋cut - NCT的night night 中文字幕</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg clearfix">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/b.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">【田馥甄个人舔屏向】 E.T 饭制版</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/c.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">车银优生日快乐 饭制版</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/d.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">鸭鸥亭签名会 主-JB 饭拍版</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/e.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">皮卡丘之歌1.0 饭制版</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/f.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">猪肝爱豆 Highlight特辑下部 中文字幕</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="los"><img src="img/img/loading.gif"></ul>
+                        </div>
+                    </section>
+                </div>
+                <div class="tab">
+                    <header class="tab_nav clearfix">
+                        <h3>MV首播</h3>
+                        <a href="javascript:;">更多&gt;</a>
+                    </header>
+                    <section class="tab_content">
+                        <div class="tab_menu">
+                            <a href="javascript:;" class="J_area cur" data-area="all">全部</a>
+                            <a href="javascript:;" class="J_area" data-area="ml">内地</a>
+                            <a href="javascript:;" class="J_area" data-area="ht">港台</a>
+                            <a href="javascript:;" class="J_area" data-area="us">欧美</a>
+                            <a href="javascript:;" class="J_area" data-area="kr">韩国</a>
+                            <a href="javascript:;" class="J_area" data-area="jp">日本</a>
+                            <span class="tab_menu_flag"></span>
+                        </div>
+                        <div class="tab_detail clearfix">
+                            <ul><img src="img/img/loading.gif"></ul>
+                            <ul class="video_item_list">
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/a.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">世勋cut - NCT的night night 中文字幕</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg clearfix">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/b.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">【田馥甄个人舔屏向】 E.T 饭制版</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/c.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">车银优生日快乐 饭制版</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/d.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">鸭鸥亭签名会 主-JB 饭拍版</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/e.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">皮卡丘之歌1.0 饭制版</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/f.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">猪肝爱豆 Highlight特辑下部 中文字幕</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul><img src="img/img/loading.gif"></ul>
+                        </div>
+                    </section>
+                </div>
+                <div class="tab">
+                    <header class="tab_nav clearfix">
+                        <h3>MV首播</h3>
+                        <a href="javascript:;">更多&gt;</a>
+                    </header>
+                    <section class="tab_content">
+                        <div class="tab_menu">
+                            <a href="javascript:;" class="J_area cur" data-area="all">全部</a>
+                            <a href="javascript:;" class="J_area" data-area="ml">内地</a>
+                            <a href="javascript:;" class="J_area" data-area="ht">港台</a>
+                            <a href="javascript:;" class="J_area" data-area="us">欧美</a>
+                            <a href="javascript:;" class="J_area" data-area="kr">韩国</a>
+                            <a href="javascript:;" class="J_area" data-area="jp">日本</a>
+                            <span class="tab_menu_flag"></span>
+                        </div>
+                        <div class="tab_detail clearfix">
+                            <ul><img src="img/img/loading.gif"></ul>
+                            <ul class="video_item_list">
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/a.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">世勋cut - NCT的night night 中文字幕</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg clearfix">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/b.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">【田馥甄个人舔屏向】 E.T 饭制版</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/c.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">车银优生日快乐 饭制版</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/d.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">鸭鸥亭签名会 主-JB 饭拍版</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/e.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">皮卡丘之歌1.0 饭制版</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/f.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">猪肝爱豆 Highlight特辑下部 中文字幕</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul><img src="img/img/loading.gif"></ul>
+                        </div>
+                    </section>
+                </div>
+                <div class="tab">
+                    <header class="tab_nav clearfix">
+                        <h3>MV首播</h3>
+                        <a href="javascript:;">更多&gt;</a>
+                    </header>
+                    <section class="tab_content">
+                        <div class="tab_menu">
+                            <a href="javascript:;" class="J_area cur" data-area="all">全部</a>
+                            <a href="javascript:;" class="J_area" data-area="ml">内地</a>
+                            <a href="javascript:;" class="J_area" data-area="ht">港台</a>
+                            <a href="javascript:;" class="J_area" data-area="us">欧美</a>
+                            <a href="javascript:;" class="J_area" data-area="kr">韩国</a>
+                            <a href="javascript:;" class="J_area" data-area="jp">日本</a>
+                            <span class="tab_menu_flag"></span>
+                        </div>
+                        <div class="tab_detail clearfix">
+                            <ul><img src="img/img/loading.gif"></ul>
+                            <ul class="video_item_list">
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/a.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">世勋cut - NCT的night night 中文字幕</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg clearfix">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/b.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">【田馥甄个人舔屏向】 E.T 饭制版</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/c.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">车银优生日快乐 饭制版</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/d.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">鸭鸥亭签名会 主-JB 饭拍版</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/e.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">皮卡丘之歌1.0 饭制版</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/f.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">猪肝爱豆 Highlight特辑下部 中文字幕</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul><img src="img/img/loading.gif"></ul>
+                        </div>
+                    </section>
+                </div>
+                <div class="tab">
+                    <header class="tab_nav clearfix">
+                        <h3>MV首播</h3>
+                        <a href="javascript:;">更多&gt;</a>
+                    </header>
+                    <section class="tab_content">
+                        <div class="tab_menu">
+                            <a href="javascript:;" class="J_area cur" data-area="all">全部</a>
+                            <a href="javascript:;" class="J_area" data-area="ml">内地</a>
+                            <a href="javascript:;" class="J_area" data-area="ht">港台</a>
+                            <a href="javascript:;" class="J_area" data-area="us">欧美</a>
+                            <a href="javascript:;" class="J_area" data-area="kr">韩国</a>
+                            <a href="javascript:;" class="J_area" data-area="jp">日本</a>
+                            <span class="tab_menu_flag"></span>
+                        </div>
+                        <div class="tab_detail clearfix">
+                            <ul><img src="img/img/loading.gif"></ul>
+                            <ul class="video_item_list">
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/a.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">世勋cut - NCT的night night 中文字幕</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg clearfix">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/b.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">【田馥甄个人舔屏向】 E.T 饭制版</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/c.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">车银优生日快乐 饭制版</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/d.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">鸭鸥亭签名会 主-JB 饭拍版</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/e.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">皮卡丘之歌1.0 饭制版</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="video_item_wrapper">
+                                        <!--视频封面-->
+                                        <a href="javascript:;">
+                                            <img src="img/img/f.jpg">
+                                        </a>
+                                        <!--视频详细信息-->
+                                        <div class="video_item_meta">
+                                            <!--标题-->
+                                            <div class="video_title">
+                                                <a href="javascript:;">猪肝爱豆 Highlight特辑下部 中文字幕</a>
+                                            </div>
+                                            <!--播放数、评论数-->
+                                            <div class="video_msg">
+                                                <div class="play_num">226</div>
+                                                <div class="comment_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul><img src="img/img/loading.gif"></ul>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </div>
 </div>
-<script type="text/javascript">
-    var clockUl = document.querySelector(".clock");
-    for (i = 0; i < 60; i++){
-        var minutesBox = document.createElement("li");
-        clockUl.appendChild(minutesBox);
-        minutesBox.style.transform = "rotate(" + i*6 + "deg)";
-    }
-    var hourDiv = document.querySelector(".hour");
-    var minuteDiv = document.querySelector(".minute");
-    var secondDiv = document.querySelector(".second");
-    setInterval(function(){
-        var timer = new Date();//获取当前时间。
-        var secondTime = timer.getSeconds();//获取当前秒数。
-        var minuteTime = timer.getMinutes() + secondTime/60;//获取当前分数。
-        var hourTime = timer.getHours() + minuteTime/60;//获取当前小时数。
-        hourDiv.style.transform = "rotate(" + hourTime*30 + "deg)";
-        minuteDiv.style.transform = "rotate(" + minuteTime*6 + "deg)";
-        secondDiv.style.transform = "rotate(" + secondTime*6 + "deg)";
-    },1000);
-</script>
+<div class="scrollBar"></div>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/transform_2d.js"></script>
 </body>
 </html>

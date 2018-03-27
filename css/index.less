@@ -1,0 +1,361 @@
+@rem: 67.5rem;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background-color: #eeeeee;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrap>.header {
+  background-color: #0b0d0f;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 888;
+}
+
+.nav {
+  height: 135/@rem;
+}
+
+.nav {
+  overflow: hidden;
+}
+
+.nav .logo {
+  float: left;
+}
+
+.nav .logo img {
+  width: 240/@rem;
+  height: 88/@rem;
+  padding: 26/@rem 17/@rem 21/@rem;
+}
+
+.nav .menuClose {
+  float: left;
+  width: 129/@rem;
+  height: 135/@rem;
+  background: url(../img/menuBtn.png) no-repeat center 16/@rem;
+  background-size: 82/@rem 233/@rem;
+}
+
+.nav .menuOpen {
+  float: left;
+  width: 129/@rem;
+  height: 135/@rem;
+  background: url(../img/menuBtn.png) no-repeat center -120/@rem;
+  background-size: 82/@rem 233/@rem;
+}
+
+.nav .btn {
+  padding-top: 21/@rem;
+  overflow: hidden;
+}
+
+.nav .btn a {
+  float: right;
+  height: 78/@rem;
+  width: 111/@rem;
+  line-height: 78/@rem;
+  background-color: #690;
+  color: #ccc;
+  margin-right: 15/@rem;
+  font-size: 42/@rem;
+  text-align: center;
+  border-radius: 8/@rem;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.search {
+  background-color: #0b0d0f;
+  height: 103/@rem;
+  padding: 16/@rem;
+}
+
+.search #text {
+  float: left;
+  width: 829/@rem;
+  height: 103/@rem;
+  background-color: #999999;
+  padding: 5/@rem 10/@rem;
+  border: 1/@rem solid #5a5a5a;
+  font-size: 41/@rem;
+  color: #333;
+  border-radius: 15/@rem;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.search #text::-webkit-input-placeholder {
+  color: #333;
+}
+
+.search #text:focus {
+  background-color: #fff;
+}
+
+.search #submit {
+  float: right;
+  width: 203/@rem;
+  height: 103/@rem;
+  border: none;
+  background-color: #414040;
+  color: #fff;
+  font-size: 41/@rem;
+  border-radius: 15/@rem;
+  outline: none;
+}
+
+.mask {
+  width: 100%;
+  position: absolute;
+  top: 135/@rem;
+  padding: 10/@rem 0;
+  border-top: 1/@rem solid #6a6a6a;
+  background-color: rgba(0, 0, 0, .8);
+  display: none;
+  z-index: 999;
+}
+
+.mask ul {
+  list-style: none;
+}
+
+.mask li {
+  float: left;
+  width: 22.5%;
+  height: 135/@rem;
+  line-height: 135/@rem;
+  font-size: 54/@rem;
+  text-align: center;
+}
+
+.mask li a {
+  color: #999999;
+  font-weight: bold;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.navbar {
+  height: 157/@rem;
+  white-space: nowrap;
+  padding: 30/@rem 21/@rem;
+  float: left;
+  box-sizing: border-box;
+  border-bottom: 1/@rem solid #999999;
+}
+
+.navbar ul {
+  height: 100%;
+  line-height: 87/@rem;
+}
+
+.navbar ul li {
+  height: 100%;
+  display: inline-block;
+  padding: 0 17/@rem;
+}
+
+.navbar ul li a {
+  color: #333;
+  padding: 12/@rem;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.navbar ul li.selected {
+  background-color: #690;
+}
+
+.navbar ul li.selected a {
+  color: #fff;
+}
+
+//轮播图
+.banner_wrap {
+  width: 100%;
+  position: relative;
+}
+
+.clearfix {
+  clear: both; /*清除上方导航条的浮动*/
+}
+
+.clearfix:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+#list {
+  position: absolute;
+  /*ul没有浮动 wrap不能使用overflow:hidden
+   来获取高度*/
+  list-style: none;
+  overflow: hidden;
+}
+
+#list li {
+  float: left;
+}
+
+#list li img {
+  display: block;
+}
+
+.span_nav {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+}
+
+.span_nav span {
+  height: 10px;
+  width: 10px;
+  background-color: #333333;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.span_nav span.active {
+  background-color: orangered;
+}
+
+//tab区域
+//tab头部
+.tab {
+  background-color: #fff;
+}
+
+.tab header {
+  padding: 17/@rem;
+  background-color: #fff;
+  padding-bottom: 0;
+}
+
+.tab header h3 {
+  float: left;
+  font-weight: normal;
+  font-size: 56/@rem;
+}
+
+.tab header a {
+  float: right;
+  color: #000;
+  font-size: 40/@rem;
+}
+
+//tab菜单
+.tab section .tab_menu {
+  padding: 0 17/@rem 10/@rem 17/@rem;
+  position: relative;
+}
+
+.tab section .tab_menu a {
+  display: inline-block;
+  font-size: 46/@rem;
+  width: 120/@rem;
+  height: 80/@rem;
+  line-height: 80/@rem;
+  text-align: center;
+  color: #0b0d0f;
+}
+
+.tab_menu_flag {
+  height: 10/@rem;
+  width: 120/@rem;
+  background-color: #690;
+  position: absolute;
+  bottom: 0;
+  left: 17/@rem;
+}
+
+//tab内容
+ul {
+  list-style: none
+}
+
+div.tab_detail {
+  width: 300%;
+}
+
+div.tab_detail ul {
+  float: left;
+  width: 33.3333333%;
+  overflow: hidden;
+  text-align: center;
+}
+
+div.tab_detail ul li {
+  float: left;
+  background-color: #eeeeee;
+  margin: 8/@rem 17/@rem;
+  padding: 10/@rem;
+}
+
+.video_item_wrapper {
+  width: 486/@rem;
+}
+
+.video_item_wrapper img {
+  width: 100%;
+}
+
+.video_item_meta .video_title a {
+  font-size: 35/@rem;
+  margin-bottom: 10/@rem;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #5a5a5a;
+}
+
+.video_item_meta .video_msg {
+  font-size: 30/@rem;
+}
+
+.video_msg .play_num {
+  float: left;
+  height: 60/@rem;
+  line-height: 60/@rem;
+  padding: 0 10/@rem 0 45/@rem;
+  background: url("../img/img/ice.png") no-repeat 0 15/@rem;
+}
+
+.video_msg .comment_num {
+  float: left;
+  padding: 0 10/@rem 0 45/@rem;
+  line-height: 60/@rem;
+  height: 60/@rem;
+  background: url("../img/img/ice.png") no-repeat 0 -40/@rem;
+}
+
+//滚动条的样式
+.scrollBar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: deeppink;
+  opacity: 0;
+  z-index: 1000;
+}
+
+
+
+
+
+
